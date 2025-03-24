@@ -9,8 +9,9 @@ export default function Home() {
       <HeroSection />
       <NewsSection />
       <Programs />
-      <ContactUs />
       <College />
+      <ContactUs />
+      
     </div>
   );
 }
