@@ -10,7 +10,7 @@ import { RiMenuFill } from "react-icons/ri";
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
-    <div className="flex justify-between items-center px-5 lg:px-15  py-2 lg:py-5">
+    <div className="flex justify-between items-center px-2 sm:px-12 lg:px-20 py-4 lg:py-6">
       {/* Logo section */}
       <div className="flex items-center gap-2">
         <Image
