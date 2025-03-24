@@ -12,9 +12,13 @@ const nextConfig: NextConfig = {
         protocol: "https",
       },
       {
-        hostname:"unsplash.com",
-        protocol:"https"
-      }
+        hostname: "unsplash.com",
+        protocol: "https",
+      },
+      {
+        hostname: "nyc8ipr7hw.ufs.sh",
+        protocol: "https",
+      },
     ],
   },
 };
