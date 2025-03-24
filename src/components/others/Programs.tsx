@@ -31,7 +31,10 @@ const Programs = () => {
   }, [api]);
   const plugin = React.useRef(Autoplay({ delay: 4000, jump: true }));
   return (
-    <div className="flex flex-col gap-4 py-8 px-4 sm:px-12 lg:px-24 xl:px-32 relative">
+    <div
+      id="program"
+      className="flex flex-col gap-4 py-8 px-4 sm:px-12 lg:px-24 xl:px-32 relative"
+    >
       <div className="flex flex-col gap-2 justify-center items-center">
         <h1 className="text-blue-900 text-2xl md:text-3xl font-bold text-center sm:my-2">
           Programs

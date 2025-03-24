@@ -11,6 +11,7 @@ const Achievement = () => {
 
   return (
     <div
+      id="achievement"
       ref={ref} // Attach ref here
       className="relative w-full h-72 md:h-screen bg-cover bg-center bg-fixed"
       style={{ backgroundImage: "url('/hero.jpg')" }}
