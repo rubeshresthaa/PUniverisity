@@ -17,7 +17,7 @@ const HeroSection = () => {
   return (
     <div
       style={{ backgroundImage: "url('/hero.jpg')" }}
-      className="w-full h-[550px] bg-cover bg-center relative"
+      className="w-full h-96 lg:h-[550px] bg-cover bg-center relative"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -28,7 +28,7 @@ const HeroSection = () => {
           alt="Purbanchal University"
           width={200} 
           height={200}
-          className="opacity-80"
+          className="opacity-90"
         />
         <div className="space-y-2">
           <h1 className="text-lg lg:text-4xl font-bold text-amber-50">

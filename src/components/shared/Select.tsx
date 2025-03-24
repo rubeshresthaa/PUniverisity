@@ -38,11 +38,8 @@ export function SelectComp({
 
   return (
     <Select onValueChange={handleChange}>
-      <SelectTrigger className="w-full sm:max-w-44 sm:w-32 md:w-36 lg:w-40 xl:w-44 h-10 sm:h-[52px] border-[2px] border-[#F7AD3D] text-sm sm:text-base outline-none active:border-none">
+      <SelectTrigger className="w-full sm:max-w-44 sm:w-32 md:w-36 lg:w-40 xl:w-44 h-10 sm:h-[52px] border-[2px] border-blue-950 text-sm sm:text-base outline-none active:border-none">
         <div className="flex gap-2">
-          <span className="block sm:hidden md:block text-[#F7AD3D]">
-            <LucideBaby />
-          </span>
           <SelectValue placeholder={placeholder} />
         </div>
       </SelectTrigger>
