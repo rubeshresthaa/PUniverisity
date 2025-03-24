@@ -1,9 +1,11 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import NavBar from "@/components/layouts/NavBar";
 import SecondBar from "@/components/layouts/SecondBar";
 import Footer from "@/components/layouts/Footer";
+import Chatbot from "@/components/layouts/Chatbox";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +37,9 @@ export default function RootLayout({
         <SecondBar />
         {children}
         <Footer />
+        <Chatbot />
       </body>
     </html>
   );
 }
+
