@@ -15,7 +15,7 @@ import { Events, notice } from "@/constants";
 
 const NewsSection = () => {
   return (
-    <div className="">
+    <div id="news" className="">
       <h1 className="text-blue-900 text-xl md:text-3xl font-bold text-center mt-4 md:my-5">
         Events & Notices
       </h1>

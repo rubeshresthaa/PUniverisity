@@ -31,22 +31,25 @@ const NavBar = () => {
       {/* Other Section */}
       <div className="hidden md:flex space-x-4 text-base font-semibold ">
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#"}>About Us</Link>
+          <Link href={"#about"}>About Us</Link>
         </div>
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#"}>Programs</Link>
+          <Link href={"#program"}>Programs</Link>
         </div>
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#"}>News & Notices</Link>
+          <Link href={"#news"}>News & Notices</Link>
         </div>
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#"}>Affiliated College</Link>
+          <Link href={"#college"}>Affiliated College</Link>
         </div>
         <div className="hover:scale-110 transition-transform duration-300 ease-in">
           <Link href={"#"}>Result</Link>
         </div>
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#"}>Contact Us</Link>
+          <Link href={"#contact"}>Contact Us</Link>
+        </div>
+        <div className="hover:scale-105 transition-transform duration-300 ease-in">
+          <Link href={"/community"}>Login</Link>
         </div>
       </div>
       {/* Mobile Screen */}
@@ -101,6 +104,9 @@ const NavBar = () => {
             </Link>
             <Link href="#contact" onClick={() => setOpenMenu(false)}>
               Contact Us
+            </Link>
+            <Link href="#contact" onClick={() => setOpenMenu(false)}>
+              Login
             </Link>
           </div>
         </div>

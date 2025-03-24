@@ -55,7 +55,7 @@ const ContactUs = () => {
     console.log(values);
   }
   return (
-    <div className="py-5 w-full px-4 lg:px-20">
+    <div id="contact" className="py-5 w-full px-4 lg:px-20">
       <h1 className="text-2xl lg:text-3xl font-bold text-center text-blue-900 sm:mb-4">
         Contact Us
       </h1>
