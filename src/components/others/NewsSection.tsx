@@ -66,7 +66,7 @@ const NewsSection = () => {
         Events & Notices
       </h1>
       <div>
-        <div className="flex justify-between gap-2 mx-5 md:mx-10">
+        <div className="flex flex-col lg:flex-row justify-between gap-5  md:gap-2 mx-5 md:mx-10">
           <div className="w-full">
             <div className="sm:hidden w-full px-4 my-6">
               <h1 className="text-blue-900 text-base md:text-lg text-center">
@@ -129,16 +129,16 @@ const NewsSection = () => {
                 ]}
               />
             </div>
-            <div className="px-5">
+            <div className="px-0 :lgpx-5">
               <Table>
                 <TableBody>
                   {notice.map((item, index) => (
-                    <TableRow key={index}>
+                    <TableRow key={index} className="flex flex-col md:flex-row justify-center items-center lg:justify-evenly gap-0 md:gap-5 py-0 lg:py-5">
                       <TableCell className="text-lg md:text-xl">
                         {item.title}
                       </TableCell>
                       <TableCell className="text-right">
-                        <Button className="rounded-3xl bg-blue-950">
+                        <Button className="w-40 lg:w-52 text-sm md:text-base px-2 md:px-0 rounded-3xl bg-blue-950">
                           {item.btn}
                         </Button>
                       </TableCell>
@@ -152,9 +152,9 @@ const NewsSection = () => {
             <h1 className="text-blue-900 text-base md:text-lg text-center py-2 lg:py-6">
               Upcoming Events
             </h1>
-            <div className="space-y-2 flex flex-col items-center w-full">
+            <div className="space-y-2 lg:space-y-4 flex flex-col items-center w-full">
               {Events.map((event, index) => (
-                <div key={index} className="w-96 shadow-xl ;g:shadow-2xl shadow-blue-100 hover:scale-105 transition-transform duration-300 ease-in cursor-pointer">
+                <div key={index} className="w-96 shadow-xl ;g:shadow-2xl shadow-blue-100 hover:scale-105 transition-transform duration-300 ease-in cursor-pointer px-2 md:px-0">
                  
                     <Image
                       src={event.image}
