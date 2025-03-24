@@ -1,16 +1,19 @@
+"use client";
+import { Button } from "@/components/ui/button"
+import { CollegeItems } from "@/constants"
+import Image from "next/image"
+import Link from "next/link"
+import {  useRouter } from "next/navigation";
+import { FaArrowLeft } from "react-icons/fa";
 
-import Image from "next/image";
-import { Button } from "../ui/button";
-import Link from "next/link";
-import { CollegeItems } from "@/constants";
+const page = () => {
 
-const College = () => {
- 
+  const router = useRouter();
   return (
     <div className="py-5">
       <h1 className="text-xl md:text-3xl text-blue-900 text-center font-bold">Affiliated College</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 px-4 sm:px-12 lg:px-24 xl:px-32 my-5">
-        {CollegeItems.slice(0,4).map((college, index) => (
+        {CollegeItems.map((college, index) => (
           <div className="rounded-xl shadow-xs shadow-black px-2" key={index}>
             <div className="flex justify-center items-center gap-2 p-2">
               <Image
@@ -44,14 +47,20 @@ const College = () => {
           </div>
         ))}
       </div>
-        {/* View All Section */}
-        <div className="flex justify-center items-center">
-        <Link href="/college" >
-        <Button className="bg-blue-950 hover:bg-blue-900 cursor-pointer">View All Colleges
-          </Button></Link>
+      <div>
+        {/* Back Button */}
+        <div className="p-2 md:p-10">
+        <Button
+          onClick={() => router.push("/")}
+          className="bg-blue-950 hover:bg-blue-800 p-4 md:p-6 rounded-full text-white w-12 h-12 cursor-pointer font-bold text-base md:text-xl"
+        >
+          <FaArrowLeft />
+
+        </Button>
         </div>
-        
+      
+      </div>
     </div>
-  );
-};
-export default College;
+  )
+}
+export default page

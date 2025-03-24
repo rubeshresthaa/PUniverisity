@@ -88,11 +88,7 @@ const Footer = () => {
           </div>
   
           <p className="text-justify px-0 md:px-2 max-w-96 text-sm md:text-base">
-            Janak Smriti Secondary School is committed to fostering academic
-            excellence and holistic development. With dedicated educators and
-            a nurturing environment, we empower students to become
-            responsible, confident, and compassionate individuals ready to
-            excel in life.
+          Purbanchal University, established in 1993 by the Government of Nepal, aims to be a center of academic excellence in the Eastern Development Region. It focuses on promoting socio-economic transformation through quality education for a sustainable future. Dedicated to preserving, advancing, and sharing knowledge, the university fosters open inquiry and scholarly debate to support the development of rural communities and their economies.
           </p>
         </div>
 
@@ -138,13 +134,14 @@ const Footer = () => {
           </div>
           <div className="flex gap-3">
             <Link
-              href="https://www.facebook.com/share/1BfYGM7FaX/"
+              href="https://www.facebook.com/share/1BfYGM7FaX/" target="_blank"
               className="p-2 border rounded-full bg-white text-black"
             >
               <FaFacebookF />
             </Link>
             <Link
-              href="#"
+              href="https://www.instagram.com/explore/locations/1028973704/purbanchal-university-koshi-haraicha-gothagoun-morang/?hl=en"
+              target="_blank"
               className="p-2 border rounded-full bg-white text-black"
             >
               <FaInstagram />

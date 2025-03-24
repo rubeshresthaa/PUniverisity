@@ -112,3 +112,48 @@ export const HeroData = [
       "https://s5ronyp76h.ufs.sh/f/qNnxVbCeM2baaZtF5cIlz7EHNJMXP3V5tDYo6U9QOZmCdfvL",
   },
 ];
+
+// College 
+
+export const CollegeItems = [
+  {
+    title: "Purbanchal University",
+    logo: "/plogo.png",
+    image: "/hero.jpg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
+    link: "https://puexam.edu.np/",
+  },
+  {
+    title: "Purbanchal University",
+    logo: "/plogo.png",
+    image: "/hero.jpg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
+    link: "https://puexam.edu.np/",
+  },
+  {
+    title: "Purbanchal University",
+    logo: "/plogo.png",
+    image: "/hero.jpg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
+    link: "https://puexam.edu.np/",
+  },
+  {
+    title: "Purbanchal University",
+    logo: "/plogo.png",
+    image: "/hero.jpg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
+    link: "https://puexam.edu.np/",
+  },
+  {
+    title: "Purbanchal University",
+    logo: "/plogo.png",
+    image: "/hero.jpg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
+    link: "https://puexam.edu.np/",
+  },
+];
