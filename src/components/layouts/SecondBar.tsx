@@ -19,7 +19,7 @@ const SecondBar = () => {
       </Button>
 
       {/* Scrolling Text */}
-      <div className="w-[70%] overflow-hidden whitespace-nowrap">
+      <div className="w-full overflow-hidden whitespace-nowrap">
         <div className="animate-marquee flex space-x-10">
           {sentences.map((sentence, i) => (
             <span
