@@ -23,7 +23,7 @@ export default function Filter({
     }
     params.set(filterField, value);
 
-    router.push(`${pathname}?${params.toString()}`);
+    // router.push(`${pathname}?${params.toString()}`);
   }
 
   return (

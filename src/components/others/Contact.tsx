@@ -14,9 +14,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "../ui/button";
-import { FaLocationDot } from "react-icons/fa6";
-import { IoIosMail } from "react-icons/io";
-import { IoCall } from "react-icons/io5";
 import FormInputDemo from "../shared/FormInput";
 
 const ContactUs = () => {
@@ -59,12 +56,12 @@ const ContactUs = () => {
   }
   return (
     <div className="py-5 w-full px-4 lg:px-20">
-      <h1 className="text-2xl lg:text-3xl font-bold text-center text-blue-900 mb-4">
+      <h1 className="text-2xl lg:text-3xl font-bold text-center text-blue-900 sm:mb-4">
         Contact Us
       </h1>
-      <div className="flex flex-col md:flex-row justify-center  gap-10 lg:gap-10 px-0 lg:px-5 py-2 lg:py-4 rounded shadow-2xl">
+      <div className="flex flex-col md:flex-row justify-center  gap-10 lg:gap-10 px-0 lg:px-5  lg:py-4 rounded shadow-2xl">
         {/* First Section */}
-        <div className="flex-1 space-y-5 px-10 py-5 lg:py-10">
+        <div className="flex-1 space-y-5 px-2 sm:px-10 py-5 lg:py-10">
           <div className="py-5 mx-auto h-fit  rounded">
             <iframe
               className="w-full h-96 rounded"
@@ -76,11 +73,11 @@ const ContactUs = () => {
           </div>
         </div>
         {/* Second Section */}
-        <div className="flex-1 w-full lg:w-1/2 px-1 md:px-0 py-4">
+        <div className="flex-1 w-full lg:w-1/2 md:px-0 py-4 px-4 sm:px-2">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4 space-y-8 text-gray-900"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 space-y-4 sm:space-y-8 text-gray-900"
             >
               <FormInputDemo
                 name="firstName"

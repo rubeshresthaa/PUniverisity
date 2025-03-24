@@ -33,11 +33,11 @@ const Programs = () => {
   return (
     <div className="flex flex-col gap-4 py-8 px-4 sm:px-12 lg:px-24 xl:px-32 relative">
       <div className="flex flex-col gap-2 justify-center items-center">
-        <h1 className="text-blue-900 text-xl md:text-3xl font-bold text-center my-2">
+        <h1 className="text-blue-900 text-2xl md:text-3xl font-bold text-center sm:my-2">
           Programs
         </h1>
       </div>
-      <Carousel setApi={setApi}>
+      <Carousel setApi={setApi} plugins={[plugin.current]}>
         <CarouselContent className="-ml-2 md:-ml-4">
           {ProgramList.map((item, index) => (
             <CarouselItem

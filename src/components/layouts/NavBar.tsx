@@ -10,27 +10,26 @@ import { RiMenuFill } from "react-icons/ri";
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
-    <div className="flex justify-between items-center px-5 lg:px-15  py-2 lg:py-5">
+    <div className="flex justify-between items-center px-5 lg:px-15  py-1 lg:py-3 sticky top-0 z-50 bg-white">
       {/* Logo section */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1 sm:gap-2">
         <Image
           src="/plogo.png"
           alt="Image of Purvanchal University"
           width={60}
           height={60}
-          className=""
         />
         <div>
-          <h1 className="capitalize text-xl md:text-2xl text-blue-900 font-bold">
-            Purbanchal University
+          <h1 className="capitalize text-base sm:text-xl md:text-xl text-blue-900 font-bold flex flex-col sm:flex-row sm:gap-1">
+            <span>Purbanchal</span> <span>University</span>
           </h1>
-          <p className="font-medium text-blue-950">
+          <p className="hidden sm:block text-sm font-medium text-blue-950">
             Office Of The Examination Department, Biratnagar
           </p>
         </div>
       </div>
       {/* Other Section */}
-      <div className="hidden md:block lg:flex space-x-4 text-base font-semibold ">
+      <div className="hidden md:flex space-x-4 text-base font-semibold ">
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
           <Link href={"#"}>About Us</Link>
         </div>
@@ -52,14 +51,14 @@ const NavBar = () => {
       </div>
       {/* Mobile Screen */}
       <div className="block md:hidden">
-        <Button
+        <button
           onClick={() => setOpenMenu((prev) => !prev)}
           className="bg-white hover:bg-white cursor-pointer"
         >
-          <RiMenuFill size={60} className="text-black bg-white" />
-        </Button>
+          <RiMenuFill size={20} className="text-black bg-white" />
+        </button>
         <div
-          className={`absolute top-0 right-0 z-50 min-w-50 ${
+          className={`absolute top-0 right-0 z-50 min-w-50 h-screen ${
             openMenu ? "flex" : "hidden"
           } flex-col items-end p-4 h-screen bg-white gap-4 text-gray-900`}
         >
