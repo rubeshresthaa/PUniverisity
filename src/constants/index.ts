@@ -113,47 +113,137 @@ export const HeroData = [
   },
 ];
 
-// College 
-
-export const CollegeItems = [
+export const postlist: PostType[] = [
   {
-    title: "Purbanchal University",
-    logo: "/plogo.png",
-    image: "/hero.jpg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
-    link: "https://puexam.edu.np/",
+    id: 4,
+    title: "Hiring in Purbanchal university",
+    tag: "job",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+              debitis magnam laudantium aperiam autem voluptatum rem temporibus cum
+              non? Accusantium dolorum recusandae voluptatum? Vitae quos quaerat
+              quis! Sint error, quasi ab amet voluptatum, at sit suscipit quo minus
+              nobis reiciendis quae. Excepturi, ea! Repudiandae dignissimos eos
+              ratione repellat saepe inventore Lorem ipsum dolor, sit amet
+              consectetur adipisicing elit. Reprehenderit blanditiis quibusdam quos
+              aut alias delectus suscipit vel necessitatibus quod temporibus
+              laboriosam tempore totam sed, officia magnam soluta quas deserunt!
+              Molestiae magnam sed, repellendus obcaecati officia recusandae. Sit,
+              ipsum officia eum mollitia ipsam minima facere nihil explicabo veniam
+              voluptates animi quos?`,
+    authorImage:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    authorName: "Tom Hardy",
+    comments: [
+      {
+        authorImage:
+          "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        authorName: "MR. Apes",
+        comment: "This is a demo Coment 3",
+      },
+    ],
+    likes: 100,
+    image: "",
+    published_date: "",
   },
   {
-    title: "Purbanchal University",
-    logo: "/plogo.png",
-    image: "/hero.jpg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
-    link: "https://puexam.edu.np/",
+    id: 1,
+    title: "Home made products",
+    tag: "others",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+              debitis magnam laudantium aperiam autem voluptatum rem temporibus cum
+              non? Accusantium dolorum recusandae voluptatum? Vitae quos quaerat
+              quis! Sint error, quasi ab amet voluptatum, at sit suscipit quo minus
+              nobis reiciendis quae. Excepturi, ea! Repudiandae dignissimos eos
+              ratione repellat saepe inventore Lorem ipsum dolor, sit amet
+              consectetur adipisicing elit. Reprehenderit blanditiis quibusdam quos
+              aut alias delectus suscipit vel necessitatibus quod temporibus
+              laboriosam tempore totam sed, officia magnam soluta quas deserunt!
+              Molestiae magnam sed, repellendus obcaecati officia recusandae. Sit,
+              ipsum officia eum mollitia ipsam minima facere nihil explicabo veniam
+              voluptates animi quos?`,
+    authorImage:
+      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    authorName: "Ujjwal Neupane",
+    comments: [
+      {
+        authorImage:
+          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        authorName: "Rubika stha",
+        comment: "This is a demo comment 1",
+      },
+      {
+        authorImage:
+          "https://plus.unsplash.com/premium_photo-1683121366070-5ceb7e007a97?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        authorName: "John Doe",
+        comment: "This is a demo Coment 2",
+      },
+      {
+        authorImage:
+          "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        authorName: "MR. Apes",
+        comment: "This is a demo Coment 3",
+      },
+    ],
+    likes: 20,
+    image:
+      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    published_date: "",
   },
   {
-    title: "Purbanchal University",
-    logo: "/plogo.png",
-    image: "/hero.jpg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
-    link: "https://puexam.edu.np/",
+    id: 3,
+    title: "Improve your programming skills",
+    tag: "skills",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+              debitis magnam laudantium aperiam autem voluptatum rem temporibus cum
+              non? Accusantium dolorum recusandae voluptatum? Vitae quos quaerat
+              quis! Sint error, quasi ab amet voluptatum, at sit suscipit quo minus
+              nobis reiciendis quae. Excepturi, ea! Repudiandae dignissimos eos
+              ratione repellat saepe inventore Lorem ipsum dolor, sit amet
+              consectetur adipisicing elit. Reprehenderit blanditiis quibusdam quos
+              aut alias delectus suscipit vel necessitatibus quod temporibus
+              laboriosam tempore totam sed, officia magnam soluta quas deserunt!
+              Molestiae magnam sed, repellendus obcaecati officia recusandae. Sit,
+              ipsum officia eum mollitia ipsam minima facere nihil explicabo veniam
+              voluptates animi quos?`,
+    authorImage:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    authorName: "Biraj Bhatta",
+    comments: [],
+    likes: 5,
+    image:
+      "https://images.unsplash.com/photo-1508317469940-e3de49ba902e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    published_date: "",
   },
   {
-    title: "Purbanchal University",
-    logo: "/plogo.png",
-    image: "/hero.jpg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
-    link: "https://puexam.edu.np/",
-  },
-  {
-    title: "Purbanchal University",
-    logo: "/plogo.png",
-    image: "/hero.jpg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio soluta blanditiis eum modi? Non, quasi amet. Maiores dolorum asperiores at sapiente porro sunt enim illo consequatur dolores ullam, et nesciunt aut expedita mollitia atque quos vel sint! Tempore, sint mollitia perspiciatis facere ex aliquid sequi corporis deserunt magni enim?",
-    link: "https://puexam.edu.np/",
+    id: 2,
+    title: "Find your dream job",
+    tag: "job",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+              debitis magnam laudantium aperiam autem voluptatum rem temporibus cum
+              non? Accusantium dolorum recusandae voluptatum? Vitae quos quaerat
+              quis! Sint error, quasi ab amet voluptatum, at sit suscipit quo minus
+              nobis reiciendis quae. Excepturi, ea! Repudiandae dignissimos eos
+              ratione repellat saepe inventore Lorem ipsum dolor, sit amet
+              consectetur adipisicing elit. Reprehenderit blanditiis quibusdam quos
+              aut alias delectus suscipit vel necessitatibus quod temporibus
+              laboriosam tempore totam sed, officia magnam soluta quas deserunt!
+              Molestiae magnam sed, repellendus obcaecati officia recusandae. Sit,
+              ipsum officia eum mollitia ipsam minima facere nihil explicabo veniam
+              voluptates animi quos?`,
+    authorImage:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    authorName: "Tom Hardy",
+    comments: [
+      {
+        authorImage:
+          "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        authorName: "MR. Apes",
+        comment: "This is a demo Coment 3",
+      },
+    ],
+    likes: 40,
+    image:
+      "https://images.unsplash.com/photo-1468322638156-074863f9362e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    published_date: "",
   },
 ];

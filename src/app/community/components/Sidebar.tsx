@@ -4,8 +4,8 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="relative">
-      <div className="flex flex-col gap-4 px-2 sticky top-24">
+    <div className="relative hidden md:block">
+      <div className="flex flex-col gap-4 px-2 sticky top-28">
         <Link
           className="text-lg flex gap-3 items-center text-black font-semibold"
           href="#"
