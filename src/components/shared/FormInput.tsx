@@ -24,7 +24,7 @@ const FormInputDemo = ({
       name={name}
       render={({ field }) => (
         <FormItem>
-          <FormLabel className="text-lg">{label}</FormLabel>
+          <FormLabel className="text-base">{label}</FormLabel>
           <FormControl>
             <Input placeholder={placeholder} {...field} />
           </FormControl>
