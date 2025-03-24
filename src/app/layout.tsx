@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/layouts/NavBar";
 import SecondBar from "@/components/layouts/SecondBar";
 import TopBar from "@/components/layouts/TopBar";
+import Footer from "@/components/layouts/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <NavBar />
         <SecondBar/>
         {children}
+        <Footer />
       </body>
     </html>
   );

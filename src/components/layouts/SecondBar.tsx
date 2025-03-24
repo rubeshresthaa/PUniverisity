@@ -11,7 +11,7 @@ const SecondBar = () => {
   ];
 
   return (
-    <div className="flex justify-evenly items-center px-5 md:px-10 bg-gray-950 py-2">
+    <div className="flex justify-between items-center px-4 sm:px-12 lg:px-20 bg-gray-950 py-2">
       {/* Notices Button */}
       <Button className="bg-white text-gray-950 py-5 flex items-center hover:bg-amber-50 cursor-pointer">
         <FaCalendarAlt className="mr-2" />
