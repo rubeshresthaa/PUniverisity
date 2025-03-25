@@ -3,12 +3,10 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { CollegeItems } from "@/constants";
 import { useGetCollegeQuery } from "@/store/apiSlice";
 
 const College = () => {
   const { data: colleges } = useGetCollegeQuery();
-  console.log("COllege:", colleges);
   return (
     <div id="college" className="py-5">
       <h1 className="text-xl md:text-3xl text-blue-900 text-center font-bold">
@@ -16,7 +14,7 @@ const College = () => {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-6 px-4 sm:px-12 lg:px-24 xl:px-32 my-5">
         {colleges &&
-          colleges.slice(0, 3).map((college,index) => (
+          colleges.slice(0, 3).map((college, index) => (
             <div
               className="rounded-xl shadow-xs shadow-black px-2 py-2"
               key={index}

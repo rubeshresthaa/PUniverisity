@@ -1,6 +1,6 @@
 "use client";
 
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export default function Filter({
   filterField,
@@ -10,8 +10,6 @@ export default function Filter({
   options: { value: string; label: string }[];
 }) {
   const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const router = useRouter();
 
   const currentFilter = searchParams.get(filterField) || options[0].value;
 

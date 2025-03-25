@@ -7,9 +7,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 
-const page = () => {
+const College = () => {
   const router = useRouter();
-  const{data:college}=useGetCollegeQuery();
+  const { data: college } = useGetCollegeQuery();
 
   return (
     <div className="py-5">
@@ -67,4 +67,4 @@ const page = () => {
     </div>
   );
 };
-export default page;
+export default College;

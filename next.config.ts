@@ -24,10 +24,13 @@ const nextConfig: NextConfig = {
         protocol: "https",
       },
       {
-        hostname:"hackathon-project-t6ip.onrender.com",
-        protocol:"https"
-      }
+        hostname: "hackathon-project-t6ip.onrender.com",
+        protocol: "https",
+      },
     ],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 

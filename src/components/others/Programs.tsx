@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/carousel";
 import React from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { ProgramList } from "@/constants";
 import ProgramCard from "../shared/ProgramCard";
 import { useGetProgramsQuery } from "@/store/apiSlice";
 
@@ -59,7 +58,6 @@ const Programs = () => {
                 department={course.department}
                 id={course.id}
                 is_active={course.is_active}
-                
               />
             </CarouselItem>
           ))}

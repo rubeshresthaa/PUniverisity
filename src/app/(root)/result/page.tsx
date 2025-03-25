@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ResultForm from "./ResultForm";
 import Image from "next/image";
 
-const page = () => {
+const Result = () => {
   const [result, setResult] = useState(false);
   console.log(result);
   return (
@@ -39,4 +39,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Result;

@@ -15,6 +15,7 @@ const FormInputDemo = ({
   type,
 }: {
   name: string;
+
   control: Control<any>;
   label: string;
   placeholder: string;

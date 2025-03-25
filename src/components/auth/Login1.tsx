@@ -52,11 +52,7 @@ const Login1 = () => {
       password: values.password,
     });
 
-    response && response.data
-      ? toast.success("Login successfull")
-      : response.error
-      ? toast.error("Failed to login, please try again")
-      : "";
+
     if (response && response.data?.access) {
       form.reset();
       localStorage.setItem("access", response.data.access);

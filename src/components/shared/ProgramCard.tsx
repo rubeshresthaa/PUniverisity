@@ -7,10 +7,6 @@ const ProgramCard = ({
   credit_hours,
   semester,
   year,
-  coursecode,
-  department,
-  id,
-  is_active,
 }: ProgramCardType) => {
   return (
     <div className="flex flex-col gap-4 rounded-md relative shadow-md shadow-gray-500 group min-h-80">
