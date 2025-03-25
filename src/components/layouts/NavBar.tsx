@@ -6,6 +6,7 @@ import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { Button } from "../ui/button";
 import { RiMenuFill } from "react-icons/ri";
+import Main from "../auth/Main";
 
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -36,6 +37,14 @@ const NavBar = () => {
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
           <Link href={"/#program"}>Programs</Link>
         </div>
+      <div className="flex gap-5">
+        <div className="hidden md:flex items-center space-x-6 text-base font-semibold ">
+          <div className="hover:scale-105 transition-transform duration-300 ease-in">
+            <Link href={"#about"}>About</Link>
+          </div>
+          <div className="hover:scale-105 transition-transform duration-300 ease-in">
+            <Link href={"#program"}>Programs</Link>
+          </div>
 
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
           <Link href={"/#college"}>College</Link>
@@ -49,6 +58,18 @@ const NavBar = () => {
         <div className="hover:scale-110 transition-transform duration-300 ease-in">
           <Link href={"/blog"}>Blog</Link>
         </div>
+          <div className="hover:scale-105 transition-transform duration-300 ease-in">
+            <Link href={"#college"}>College</Link>
+          </div>
+          <div className="hover:scale-110 transition-transform duration-300 ease-in">
+            <Link href={"/result"}>Result</Link>
+          </div>
+          <div className="hover:scale-110 transition-transform duration-300 ease-in">
+            <Link href={"#"}>Form</Link>
+          </div>
+          <div className="hover:scale-110 transition-transform duration-300 ease-in">
+            <Link href={"/blog"}>Blog</Link>
+          </div>
 
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
           <Link href={"/#contact"}>Contact</Link>
@@ -59,6 +80,11 @@ const NavBar = () => {
         >
           Login
         </Link>
+          <div className="hover:scale-105 transition-transform duration-300 ease-in">
+            <Link href={"#contact"}>Contact</Link>
+          </div>
+        </div>
+        <Main />
       </div>
       {/* Mobile Screen */}
       <div className="block md:hidden">
