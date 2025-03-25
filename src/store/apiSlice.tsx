@@ -33,35 +33,69 @@ export const { usePostContactMutation } = contactApi;
 
 // Blog APi
 
-export const blogApi=createApi({
-  reducerPath:"blogApi",
+export const blogApi = createApi({
+  reducerPath: "blogApi",
   baseQuery,
-  endpoints:(builder)=>({
-    getBlogs:builder.query<BlogNew,void>({
-      query:()=>({
-        url:'blogpost/',
-        method:"GET"
-      })
-    })
-  })
-})
+  endpoints: (builder) => ({
+    getBlogs: builder.query<BlogNew, void>({
+      query: () => ({
+        url: "blogpost/",
+        method: "GET",
+      }),
+    }),
+    getBlogsById: builder.query<BlogNew, Number>({
+      query: (id) => ({
+        url: `blogcontent/${id}/`,
+        method: "GET",
+      }),
+    }),
+  }),
+});
 
-export const {useGetBlogsQuery}=blogApi;
+export const { useGetBlogsQuery, useGetBlogsByIdQuery } = blogApi;
 
 // imageSLider
 
-export const imageApi=createApi({
-  reducerPath:"imageApi",
+export const imageApi = createApi({
+  reducerPath: "imageApi",
   baseQuery,
-  endpoints:(builder)=>({
-    getImageSlider:builder.query<BannerResponse,void>({
-      query:()=>({
-        url:"image_sliders",
-        method:"GET"
-      })
+  endpoints: (builder) => ({
+    getImageSlider: builder.query<BannerResponse, void>({
+      query: () => ({
+        url: "image_sliders",
+        method: "GET",
+      }),
+    }),
+  }),
+});
 
-    })
-  })
-})
+export const { useGetImageSliderQuery } = imageApi;
 
-export const {useGetImageSliderQuery}=imageApi;
+export const programApi = createApi({
+  reducerPath: "programApi",
+  baseQuery,
+  endpoints: (builder) => ({
+    getPrograms: builder.query<ProgramCardType[], void>({
+      query: () => ({
+        url: "course/",
+        method: "GET",
+      }),
+    }),
+  }),
+});
+
+export const { useGetProgramsQuery } = programApi;
+
+export const collegeApi = createApi({
+  reducerPath: "collegeApi",
+  baseQuery,
+  endpoints: (builder) => ({
+    getCollege: builder.query<CollegeResponse[], void>({
+      query: () => ({
+        url: "affiliated/",
+        method: "GET",
+      }),
+    }),
+  }),
+});
+export const { useGetCollegeQuery } = collegeApi;

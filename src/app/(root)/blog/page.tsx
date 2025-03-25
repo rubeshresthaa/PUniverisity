@@ -1,18 +1,13 @@
 "use client";
-import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { BlogCollectionDemo } from "@/constants";
 import { useGetBlogsQuery } from "@/store/apiSlice";
-
-
 const page = () => {
   const router = useRouter();
   const {data:blogs}=useGetBlogsQuery();
   console.log(blogs)
-
   return (
     <section className="flex flex-col gap-10 px-4 sm:px-12 lg:px-24 xl:px-32 pb-10 mt-5">
       <div className="flex flex-col gap-6 relative my-8">
@@ -43,7 +38,7 @@ const page = () => {
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-52 object-cover rounded-xl px-5 py-2"
+                className="w-full h-60 object-contain rounded-xl px-5 py-2"
               />
             </div>
             <h1 className="text-center font-semibold">{blog.title}</h1>

@@ -4,9 +4,13 @@ import React from "react";
 const ProgramCard = ({
   image,
   title,
-  credit,
+  credit_hours,
   semester,
   year,
+  coursecode,
+  department,
+  id,
+  is_active,
 }: ProgramCardType) => {
   return (
     <div className="flex flex-col gap-4 rounded-md relative shadow-md shadow-gray-500 group min-h-80">
@@ -40,7 +44,7 @@ const ProgramCard = ({
           </p>
           <p className="flex flex-col ">
             <span>Credit Hour</span>
-            <span className="font-semibold">{credit} hours</span>
+            <span className="font-semibold">{credit_hours} hours</span>
           </p>
         </div>
       </div>

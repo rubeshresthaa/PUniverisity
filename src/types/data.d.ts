@@ -1,11 +1,15 @@
 type ProgramCardType = {
-  id: number;
+  id:number;
   title: string;
   image: string;
   semester: number;
   year: number;
-  credit: number;
+  credit_hours: number;
+  is_active:boolean;
+  department:string;
+  coursecode:string
 };
+
 type PostProp = {
   props: PostType;
 };
@@ -29,7 +33,7 @@ type PostType = {
 type ContactRequest = {
   name: string;
   email: string;
-  phone: string;
+  contact_number: string;
   message: string;
 };
 type Contact = {
@@ -50,9 +54,11 @@ type BlogNew = {
   title: string;
   image: string;
   publish_date:string
-  author:string;
+author:string;
   status:string;
   description:string;
+  sub_content_title:string
+
 }[];
 
 interface BannerResponse {
@@ -60,4 +66,14 @@ interface BannerResponse {
   next: number | null;
   previous: number | null;
   data: Banner[];
+}
+
+//College
+type CollegeResponse={
+  logo:string;
+  name:string;
+  address:string;
+  link:string;
+  description:string;
+  image:string
 }

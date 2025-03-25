@@ -11,11 +11,13 @@ import React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { ProgramList } from "@/constants";
 import ProgramCard from "../shared/ProgramCard";
+import { useGetProgramsQuery } from "@/store/apiSlice";
 
 const Programs = () => {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState<number>(0);
+  const { data: course } = useGetProgramsQuery();
 
   React.useEffect(() => {
     if (!api) {
@@ -42,18 +44,22 @@ const Programs = () => {
       </div>
       <Carousel setApi={setApi} plugins={[plugin.current]}>
         <CarouselContent className="-ml-2 md:-ml-4">
-          {ProgramList.map((item, index) => (
+          {course?.map((course) => (
             <CarouselItem
-              key={index}
+              key={course.id}
               className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 pl-2 md:pl-4 py-5"
             >
               <ProgramCard
-                id={item.id}
-                image={item.image}
-                title={item.title}
-                credit={item.credit}
-                semester={item.semester}
-                year={item.year}
+                image={course.image}
+                title={course.title}
+                credit_hours={course.credit_hours}
+                semester={course.semester}
+                year={course.year}
+                coursecode={course.coursecode}
+                department={course.department}
+                id={course.id}
+                is_active={course.is_active}
+                
               />
             </CarouselItem>
           ))}
