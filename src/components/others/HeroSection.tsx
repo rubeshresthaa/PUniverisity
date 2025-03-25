@@ -57,7 +57,7 @@ const HeroSection = () => {
         ))}
       </CarouselContent>
       <div className="bg-blend-overlay absolute w-full h-[250px] sm:h-[400px] md:h-[700px] bg-black top-0 opacity-36" />
-      <div className="absolute top-8 left-6 sm:top-28 sm:left-40 md:top-36 md:left-64 lg:top-40 lg:left-80 space-y-1 sm:space-y-2 flex flex-col items-center justify-center">
+      <div className="absolute top-8 left-6 sm:top-28 sm:left-40 md:top-36 md:left-64 lg:top-40 lg:left-80 xl:left-96 space-y-1 sm:space-y-2 flex flex-col items-center justify-center">
         <div className="w-18 h-18 md:w-36 md:h-36 lg:w-48 lg:h-48">
           <Image
             src="/plogo.png"
