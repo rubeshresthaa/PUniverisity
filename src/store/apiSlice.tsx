@@ -98,4 +98,32 @@ export const collegeApi = createApi({
     }),
   }),
 });
+
+export const authApi = createApi({
+  reducerPath: "authApi",
+  baseQuery,
+  endpoints: (builder) => ({
+    register: builder.mutation<RegisterResposne, RegisterRequest>({
+      query: (data) => ({
+        url: "register/",
+        method: "POST",
+        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }),
+    }),
+    login: builder.mutation<LoginResponse, LoginRequest>({
+      query: (data) => ({
+        url: "login/",
+        method: "POST",
+        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }),
+    }),
+  }),
+});
+export const { useLoginMutation, useRegisterMutation } = authApi;
 export const { useGetCollegeQuery } = collegeApi;
