@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Form,
   FormControl,
@@ -19,16 +18,18 @@ import { usePostContactMutation } from "@/store/apiSlice";
 import toast from "react-hot-toast";
 
 const ContactUs = () => {
-  const [postContact]=usePostContactMutation();
-  console.log("contact",postContact);
+  const [postContact] = usePostContactMutation();
 
   const contactFormSchema = z.object({
     firstName: z
       .string()
       .min(3, "First name must be at least 3 characters")
       .max(50),
-    lastName: z.string().min(1, "Last name is requried").max(50),
-    contact: z
+    lastName: z
+      .string()
+      .min(1, "Last name is required")
+      .max(50),
+    contact_number: z
       .string()
       .length(10, "Contact must be exactly 10 digits")
       .regex(/^\d+$/, "Contact must contain only numbers"),
@@ -40,46 +41,56 @@ const ContactUs = () => {
     message: z
       .string()
       .min(1, { message: "Message is required" })
-      .max(500, { message: "Message should not exceed 500 characters." }),
+      .max(500, {
+        message: "Message should not exceed 500 characters.",
+      }),
   });
+
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
-      contact: "",
+      contact_number: "",
       email: "",
       message: "",
     },
   });
 
-  // 2. Define a submit handler.
-  async function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    const name=values.firstName + values.lastName;
+  // ✅ Properly Defined Submit Handler
+  const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
+    const name = values.firstName + " " + values.lastName;
+
+    try {
+      // Call the postContact API
       const response = await postContact({
-      name,
-      email: values.email,
-      message: values.message,
-      phone: values.contact,
-    });
-    if (response?.data) {
-      toast.success("Your message sent successfully, Thank you");
-    } else {
-      toast.error(
-        "Failed to send your message, please try again later. Thank you"
-      );
+        name,
+        email: values.email,
+        message: values.message,
+        contact_number: values.contact_number,
+      }).unwrap(); // Use unwrap to catch the response or error
+
+      // Check if the response was successful
+      toast.success("Thank You For Your Response.")
+
+      // Reset the form after submission
+      form.reset();
+    } catch (error) {
+      // Log error and show toast error message
+      console.error("Error sending message:", error);
+      toast.error("An error occurred while submitting the form.");
     }
-    form.reset();
-  }
+  };
+
   return (
     <div id="contact" className="py-5 w-full px-4 lg:px-20">
       <h1 className="text-2xl lg:text-3xl font-bold text-center text-blue-900 sm:mb-4">
         Contact Us
       </h1>
-      <div className="flex flex-col md:flex-row justify-center  gap-10 lg:gap-10 px-0 lg:px-5  lg:py-4 rounded shadow-2xl">
+      <div className="flex flex-col md:flex-row justify-center gap-10 lg:gap-10 px-0 lg:px-5 lg:py-4 rounded shadow-2xl">
         {/* First Section */}
         <div className="flex-1 space-y-5 px-2 sm:px-10 py-5 lg:py-10">
-          <div className="py-5 mx-auto h-fit  rounded">
+          <div className="py-5 mx-auto h-fit rounded">
             <iframe
               className="w-full h-96 rounded"
               title="Map showing our location"
@@ -96,53 +107,24 @@ const ContactUs = () => {
               onSubmit={form.handleSubmit(onSubmit)}
               className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 space-y-4 sm:space-y-8 text-gray-900"
             >
-              <FormInputDemo
-                name="firstName"
-                control={form.control}
-                label="First Name"
-                placeholder="first name"
-              />
-              <FormInputDemo
-                name="lastName"
-                control={form.control}
-                label="Last Name"
-                placeholder="last name"
-              />
-              <FormInputDemo
-                name="contact"
-                control={form.control}
-                label="Contact Number"
-                placeholder="contact"
-              />
-              <FormInputDemo
-                name="email"
-                control={form.control}
-                label="Email"
-                placeholder="email"
-              />
+              <FormInputDemo name="firstName" control={form.control} label="First Name" placeholder="First name" />
+              <FormInputDemo name="lastName" control={form.control} label="Last Name" placeholder="Last name" />
+              <FormInputDemo name="contact_number" control={form.control} label="Contact Number" placeholder="Contact" />
+              <FormInputDemo name="email" control={form.control} label="Email" placeholder="Email" />
               <FormField
                 control={form.control}
                 name="message"
                 render={({ field }) => (
                   <FormItem className="sm:col-span-2 space-y-2">
-                    <FormLabel className="sm:text-lg">
-                      Message or Enquiry
-                    </FormLabel>
+                    <FormLabel className="sm:text-lg">Message or Enquiry</FormLabel>
                     <FormControl>
-                      <Textarea
-                        placeholder="Type your message here."
-                        {...field}
-                        className="w-full min-h-[200px]"
-                      />
+                      <Textarea placeholder="Type your message here." {...field} className="w-full min-h-[200px]" />
                     </FormControl>
                     <FormMessage className="text-red-500" />
                   </FormItem>
                 )}
               />
-              <Button
-                type="submit"
-                className="bg-blue-800 hover:bg-blue-700 font-bold cursor-pointer"
-              >
+              <Button type="submit" className="bg-blue-800 hover:bg-blue-700 font-bold cursor-pointer">
                 Submit
               </Button>
             </form>
@@ -152,4 +134,5 @@ const ContactUs = () => {
     </div>
   );
 };
+
 export default ContactUs;

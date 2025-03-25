@@ -31,14 +31,14 @@ const NavBar = () => {
       {/* Other Section */}
       <div className="hidden md:flex items-center space-x-6 text-base font-semibold ">
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#about"}>About</Link>
+          <Link href={"/#about"}>About</Link>
         </div>
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#program"}>Programs</Link>
+          <Link href={"/#program"}>Programs</Link>
         </div>
 
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#college"}>College</Link>
+          <Link href={"/#college"}>College</Link>
         </div>
         <div className="hover:scale-110 transition-transform duration-300 ease-in">
           <Link href={"/result"}>Result</Link>
@@ -47,11 +47,11 @@ const NavBar = () => {
           <Link href={"#"}>Form</Link>
         </div>
         <div className="hover:scale-110 transition-transform duration-300 ease-in">
-          <Link href={"#blog"}>Blog</Link>
+          <Link href={"/blog"}>Blog</Link>
         </div>
 
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#contact"}>Contact</Link>
+          <Link href={"/#contact"}>Contact</Link>
         </div>
         <Link
           href={"/community"}
