@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import {
+  authApi,
   blogApi,
   collegeApi,
   contactApi,
