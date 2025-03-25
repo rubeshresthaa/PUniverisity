@@ -10,9 +10,12 @@ import { RiMenuFill } from "react-icons/ri";
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
-    <div className="flex justify-between items-center px-2 sm:px-12 lg:px-20  py-1 lg:py-3 sticky top-0 z-50 bg-white">
+    <div
+  
+      className="flex justify-between items-center px-2 sm:px-12 lg:px-20  py-1 lg:py-3 sticky top-0 z-50 bg-white"
+    >
       {/* Logo section */}
-      <div className="flex items-center gap-1 sm:gap-2">
+      <Link href="#home" className="flex items-center gap-1 sm:gap-2">
         <Image
           src="/plogo.png"
           alt="Image of Purvanchal University"
@@ -27,30 +30,38 @@ const NavBar = () => {
             Office Of The Examination Department, Biratnagar
           </p>
         </div>
-      </div>
+      </Link>
       {/* Other Section */}
-      <div className="hidden md:flex space-x-4 text-base font-semibold ">
+      <div className="hidden md:flex items-center space-x-6 text-base font-semibold ">
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#about"}>About Us</Link>
+          <Link href={"#about"}>About</Link>
         </div>
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
           <Link href={"#program"}>Programs</Link>
         </div>
+
         <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#news"}>News & Notices</Link>
-        </div>
-        <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#college"}>Affiliated College</Link>
+          <Link href={"#college"}>College</Link>
         </div>
         <div className="hover:scale-110 transition-transform duration-300 ease-in">
           <Link href={"#"}>Result</Link>
         </div>
-        <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"#contact"}>Contact Us</Link>
+        <div className="hover:scale-110 transition-transform duration-300 ease-in">
+          <Link href={"#"}>Form</Link>
         </div>
-        <div className="hover:scale-105 transition-transform duration-300 ease-in">
-          <Link href={"/community"}>Login</Link>
+        <div className="hover:scale-110 transition-transform duration-300 ease-in">
+          <Link href={"#blog"}>Blog</Link>
         </div>
+
+        <div className="hover:scale-105 transition-transform duration-300 ease-in">
+          <Link href={"#contact"}>Contact</Link>
+        </div>
+        <Link
+          href={"/community"}
+          className="px-2 py-0.5 bg-blue-800 hover:bg-blue-700 text-white rounded"
+        >
+          Login
+        </Link>
       </div>
       {/* Mobile Screen */}
       <div className="block md:hidden">
@@ -94,7 +105,7 @@ const NavBar = () => {
               Programs
             </Link>
             <Link href="#contact" onClick={() => setOpenMenu(false)}>
-              News & Notice
+              News
             </Link>
             <Link href="#contact" onClick={() => setOpenMenu(false)}>
               Affiliated College

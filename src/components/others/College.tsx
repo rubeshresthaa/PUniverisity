@@ -5,7 +5,7 @@ import { CollegeItems } from "@/constants";
 
 const College = () => {
   return (
-    <div id="collge" className="py-5">
+    <div id="college" className="py-5">
       <h1 className="text-xl md:text-3xl text-blue-900 text-center font-bold">
         Affiliated College
       </h1>

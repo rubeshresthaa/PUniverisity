@@ -40,7 +40,6 @@ const HeroSection = () => {
   const plugin = React.useRef(Autoplay({ delay: 4000 }));
   return (
     <Carousel
-      id="home"
       setApi={setApi}
       plugins={[plugin.current]}
       className="w-full mb-4 sm:mb-0 relative"
@@ -56,16 +55,17 @@ const HeroSection = () => {
           ></CarouselItem>
         ))}
       </CarouselContent>
-      <div className="bg-blend-overlay absolute w-full h-[250px] sm:h-[400px] md:h-[700px] bg-black top-0 opacity-36" />
-      <div className="absolute top-8 left-6 sm:top-28 sm:left-40 md:top-36 md:left-64 lg:top-40 lg:left-80 xl:left-96 space-y-1 sm:space-y-2 flex flex-col items-center justify-center">
-        <div className="w-18 h-18 md:w-36 md:h-36 lg:w-48 lg:h-48">
+      <div className="bg-blend-overlay absolute w-full h-[250px] sm:h-[400px] md:h-[700px] bg-black top-0 opacity-40" />
+      <div className="absolute top-8 left-6 sm:top-28 sm:left-40 md:top-36 md:left-64 lg:top-40 lg:left-80 xl:left-[372px] space-y-1 sm:space-y-2 flex flex-col items-center justify-center">
+        <div className="w-18 h-18 md:w-36 md:h-36 lg:w-48 lg:h-48  rounded-full ">
           <Image
             src="/plogo.png"
             alt="Purbanchal University"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-full object-contain"
+            objectFit="cover"
+            className="w-full h-full object-cover"
           />
         </div>
         <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-amber-50">
@@ -80,7 +80,7 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-      <div className="absolute text-red-600 flex gap-2 bottom-8 left-[41%] sm:left-[45%]">
+      <div className="absolute text-red-600 flex gap-2 bottom-8 left-[41%] sm:left-[45%] lg:left-[48%]">
         {Array.from({ length: count }).map((_, index) => {
           return (
             <div
