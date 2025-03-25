@@ -14,14 +14,11 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import Link from "next/link";
-import {
-  FaApple,
-  FaFacebookF,
-  FaGoogle,
-  FaRegEye,
-  FaRegEyeSlash,
-} from "react-icons/fa";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { passwordSchema } from "@/lib/utils";
+import { useLoginMutation } from "@/store/apiSlice";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const loginFormSchema = z
   .object({
@@ -35,6 +32,8 @@ const loginFormSchema = z
   .required();
 
 const Login1 = () => {
+  const router = useRouter();
+  const [login, { isLoading }] = useLoginMutation();
   const [showPassword, setShowPassword] = useState(false);
 
   //define form
@@ -47,12 +46,25 @@ const Login1 = () => {
   });
 
   //submit handler
-  const onSubmit = (values: z.infer<typeof loginFormSchema>) => {
-    console.log(values);
-    form.reset({
-      email: "",
-      password: "",
+  const onSubmit = async (values: z.infer<typeof loginFormSchema>) => {
+    const response = await login({
+      email: values.email,
+      password: values.password,
     });
+
+    response && response.data
+      ? toast.success("Login successfull")
+      : response.error
+      ? toast.error("Failed to login, please try again")
+      : "";
+    if (response && response.data?.access) {
+      form.reset();
+      localStorage.setItem("access", response.data.access);
+      localStorage.setItem("refresh", response.data.refresh);
+      router.push("/community");
+    }
+
+    form.reset();
   };
   return (
     <div className="flex flex-col gap-8">
@@ -108,10 +120,11 @@ const Login1 = () => {
 
           <div className="flex justify-between items-center">
             <button
+              disabled={isLoading}
               type="submit"
               className="rounded-full px-4 py-1 min-w-32 bg-black text-white"
             >
-              Login
+              {isLoading ? "Loggin in.." : "Login"}
             </button>
             <Link href="#" className="text-sm font-semibold">
               Forget Passoword?

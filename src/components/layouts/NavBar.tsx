@@ -10,6 +10,7 @@ import Main from "../auth/Main";
 
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const access = localStorage.getItem("access");
   return (
     <div className="flex justify-between items-center px-2 sm:px-12 lg:px-20  py-1 lg:py-3 sticky top-0 z-50 bg-white">
       {/* Logo section */}
@@ -84,7 +85,7 @@ const NavBar = () => {
             <Link href={"#contact"}>Contact</Link>
           </div>
         </div>
-        <Main />
+        {access ? <Link href="/community">Community</Link> : <Main />}
       </div>
       {/* Mobile Screen */}
       <div className="block md:hidden">

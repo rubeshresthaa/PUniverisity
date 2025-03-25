@@ -40,7 +40,6 @@ type Contact = {
   message: string;
 };
 
-
 // Blogs
 type BlogResponse = {
   total_data: number;
@@ -53,12 +52,10 @@ type BlogNew = {
   id: number;
   title: string;
   image: string;
-  publish_date:string
-author:string;
-  status:string;
-  description:string;
-  sub_content_title:string
-
+  publish_date: string;
+  author: string;
+  status: string;
+  description: string;
 }[];
 
 interface BannerResponse {
@@ -68,12 +65,23 @@ interface BannerResponse {
   data: Banner[];
 }
 
-//College
-type CollegeResponse={
-  logo:string;
-  name:string;
-  address:string;
-  link:string;
-  description:string;
-  image:string
-}
+type LoginRequest = {
+  email: string;
+  password: string;
+};
+
+type LoginResponse = {
+  access: string;
+  refresh: string;
+};
+
+type RegisterRequest = {
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone: string;
+  password: string;
+};
+type RegisterResposne = {
+  message: string;
+};

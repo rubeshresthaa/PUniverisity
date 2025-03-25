@@ -1,14 +1,20 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { blogApi, collegeApi, contactApi, imageApi, programApi } from "./apiSlice";
-
+import {
+  blogApi,
+  collegeApi,
+  contactApi,
+  imageApi,
+  programApi,
+} from "./apiSlice";
 
 export const store = configureStore({
-  reducer: {  
-    [contactApi.reducerPath]:contactApi.reducer,
-    [blogApi.reducerPath]:blogApi.reducer,
-    [imageApi.reducerPath]:imageApi.reducer,
-    [programApi.reducerPath]:programApi.reducer,
-    [collegeApi.reducerPath]:collegeApi.reducer,
+  reducer: {
+    [contactApi.reducerPath]: contactApi.reducer,
+    [blogApi.reducerPath]: blogApi.reducer,
+    [imageApi.reducerPath]: imageApi.reducer,
+    [authApi.reducerPath]: authApi.reducer,
+    [programApi.reducerPath]: programApi.reducer,
+    [collegeApi.reducerPath]: collegeApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
@@ -16,7 +22,8 @@ export const store = configureStore({
       blogApi.middleware,
       imageApi.middleware,
       programApi.middleware,
-      collegeApi.middleware
+      collegeApi.middleware,
+      authApi.middleware
     ),
 });
 
