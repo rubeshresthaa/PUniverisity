@@ -101,15 +101,19 @@ export const notice = [
 export const HeroData = [
   {
     image:
-      "https://s5ronyp76h.ufs.sh/f/qNnxVbCeM2baA7OtzkHQGMUTh59yOfer7vLB8PWZXt2wCcsk",
+      "https://9elxk53npy.ufs.sh/f/QhMAqie5IhdLwEebGwhGhBIRtFk7XYzCwZNpWKQfTV2urPJE",
   },
   {
     image:
-      "https://s5ronyp76h.ufs.sh/f/qNnxVbCeM2baGsYLPnKVwJWsRUgG9emM7jvKzY1yFthO0f8N",
+      "https://9elxk53npy.ufs.sh/f/QhMAqie5IhdLAlllZucrVcejfM4DkKZHOu9RYips1XnQLloJ",
   },
   {
     image:
-      "https://s5ronyp76h.ufs.sh/f/qNnxVbCeM2baaZtF5cIlz7EHNJMXP3V5tDYo6U9QOZmCdfvL",
+      "https://9elxk53npy.ufs.sh/f/QhMAqie5IhdLFE3UD2opdVcf8F2T5C0OyRwYtj4KmQWu1PEH",
+  },
+  {
+    image:
+      "https://9elxk53npy.ufs.sh/f/QhMAqie5IhdL36tvarlzafwxTeHQN1mRyZGMSXAhkiDptFU9",
   },
 ];
 

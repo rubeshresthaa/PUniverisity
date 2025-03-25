@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { FaCalendarAlt } from "react-icons/fa";
 
 const SecondBar = () => {
@@ -11,12 +11,18 @@ const SecondBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center px-4 sm:px-12 lg:px-20 bg-gray-950 py-2">
+    <div
+      id="home"
+      className="flex justify-between items-center px-4 sm:px-12 lg:px-20 bg-gray-950 py-2"
+    >
       {/* Notices Button */}
-      <Button className="bg-white text-gray-950 py-1 sm:py-5 flex items-center hover:bg-amber-50 cursor-pointer">
+      <Link
+        href="#news"
+        className="bg-white text-gray-950 px-2 py-0.5 flex items-center rounded hover:bg-amber-50 cursor-pointer"
+      >
         <FaCalendarAlt className="mr-2" />
-        Notices
-      </Button>
+        <span>Notices</span>
+      </Link>
 
       {/* Scrolling Text */}
       <div className="w-full overflow-hidden whitespace-nowrap">
