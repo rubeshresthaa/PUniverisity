@@ -11,7 +11,10 @@ import Autoplay from "embla-carousel-autoplay";
 import { Button } from "../ui/button";
 import { HeroData } from "@/constants";
 import Image from "next/image";
+import { useGetImageSliderQuery } from "@/store/apiSlice";
 const HeroSection = () => {
+
+
   useEffect(() => {
     ScrollReveal().reveal(".animate-side", {
       origin: "left",

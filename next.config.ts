@@ -23,6 +23,10 @@ const nextConfig: NextConfig = {
         hostname: "s5ronyp76h.ufs.sh",
         protocol: "https",
       },
+      {
+        hostname:"hackathon-project-t6ip.onrender.com",
+        protocol:"https"
+      }
     ],
   },
 };

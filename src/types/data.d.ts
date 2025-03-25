@@ -25,3 +25,39 @@ type PostType = {
     comment: string;
   }[];
 };
+
+type ContactRequest = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+type Contact = {
+  message: string;
+};
+
+
+// Blogs
+type BlogResponse = {
+  total_data: number;
+  next: null;
+  previous: null;
+  data: BlogNew[];
+};
+
+type BlogNew = {
+  id: number;
+  title: string;
+  image: string;
+  publish_date:string
+  author:string;
+  status:string;
+  description:string;
+}[];
+
+interface BannerResponse {
+  total_data: number;
+  next: number | null;
+  previous: number | null;
+  data: Banner[];
+}

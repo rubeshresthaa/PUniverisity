@@ -290,3 +290,98 @@ export const CollegeItems = [
     link: "https://puexam.edu.np/",
   },
 ];
+
+// BLog
+export const BlogCollectionDemo = [
+  {
+    id: "101",
+    title: "Turning Challenges into Opportunities A Student's Journey",
+    image:
+      "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "Every journey, no matter how challenging, holds the promise of growth and transformation. As students, we are not just learning from textbooks, but also from the ups and downs that shape us into stronger, wiser individuals. This is the power of challenges—they push us to become the best version of ourselves.",
+    author: "Rama Limbu",
+    publishedDate: "28th of February",
+  },
+  {
+    id: "102",
+    title: "Stay Positive, Stay Strong",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661544204747-272071b388b8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "Student life is filled with highs and lows—exams, assignments, deadlines, and expectations. At times, it can feel overwhelming, but the way you think plays a crucial role in shaping your experiences. Positive thinking is not just about ignoring problems; it’s about facing them with confidence and a solution-oriented mindset. In this article, we’ll explore how a positive attitude can transform student life and lead to success.",
+    author: "Rama Limbu",
+    publishedDate: "28th of February",
+  },
+];
+
+export const BlogDataDemo = {
+  id: "101",
+  title: "Turning challenges into oppurutinity A Student's Journey",
+  description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. A id sit quae
+          in beatae voluptatem tenetur accusantium maiores repellat rerum?
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+          illum debitis rem aut officiis sapiente aliquam, est nobis praesentium
+          cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+          voluptate aliquid repellendus optio similique iusto consequuntur modi
+          eum veritatis vel laborum quasi ipsam dignissimos natus saepe quod
+          maxime, id magnam.`,
+  mainImage:
+    "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww",
+  author: "Smajhana Lama",
+  publishedDate: "28 Feb 2025",
+  content: [
+    {
+      subContentTitle: "subtitle1",
+      image:
+        "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww",
+      subContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. A id sit quae
+          in beatae voluptatem tenetur accusantium maiores repellat rerum?
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+          illum debitis rem aut officiis sapiente aliquam, est nobis praesentium
+          cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+          voluptate aliquid repellendus optio similique iusto consequuntur modi
+          eum veritatis vel laborum quasi ipsam dignissimos natus saepe quod
+          maxime, id magnam.`,
+    },
+    {
+      subContentTitle: "subtitle2",
+      image:
+        "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww",
+      subContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. A id sit quae
+          in beatae voluptatem tenetur accusantium maiores repellat rerum?
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+          illum debitis rem aut officiis sapiente aliquam, est nobis praesentium
+          cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+          voluptate aliquid repellendus optio similique iusto consequuntur modi
+          eum veritatis vel laborum quasi ipsam dignissimos natus saepe quod
+          maxime, id magnam.`,
+    },
+    {
+      subContentTitle: "subtitle3",
+      image:
+        "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww",
+      subContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. A id sit quae
+          in beatae voluptatem tenetur accusantium maiores repellat rerum?
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+          illum debitis rem aut officiis sapiente aliquam, est nobis praesentium
+          cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+          voluptate aliquid repellendus optio similique iusto consequuntur modi
+          eum veritatis vel laborum quasi ipsam dignissimos natus saepe quod
+          maxime, id magnam.`,
+    },
+    {
+      subContentTitle: "subtitle4",
+      image:
+        "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww",
+      subContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit. A id sit quae
+          in beatae voluptatem tenetur accusantium maiores repellat rerum?
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+          illum debitis rem aut officiis sapiente aliquam, est nobis praesentium
+          cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+          voluptate aliquid repellendus optio similique iusto consequuntur modi
+          eum veritatis vel laborum quasi ipsam dignissimos natus saepe quod
+          maxime, id magnam.`,
+    },
+  ],
+};
