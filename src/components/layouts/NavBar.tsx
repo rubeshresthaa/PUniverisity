@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <div className="flex justify-between items-center px-2 sm:px-12 lg:px-20  py-1 lg:py-3 sticky top-0 z-50 bg-white">
       {/* Logo section */}
-      <Link href="#home" className="flex items-center gap-1 sm:gap-2">
+      <Link href="/" className="flex items-center gap-1 sm:gap-2">
         <Image
           src="/plogo.png"
           alt="Image of Purvanchal University"
