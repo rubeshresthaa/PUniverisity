@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BsFacebook } from "react-icons/bs";
 import {
   FaArrowUp,
   FaFacebookF,
@@ -10,7 +9,6 @@ import {
   FaRegCopyright,
   FaTwitter,
 } from "react-icons/fa";
-import { IoLogoLinkedin } from "react-icons/io5";
 
 const Footer = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -33,36 +31,6 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const quickLinks = [
-    {
-      name: "Home",
-      link: "/home",
-    },
-    {
-      name: "About Us",
-      link: "/about",
-    },
-    {
-      name: "Notice & Events",
-      link: "/notice",
-    },
-    {
-      name: "Program",
-      link: "/program",
-    },
-    {
-      name: "Affiliated College",
-      link: "/affiliated",
-    },
-    {
-      name: "Result",
-      link: "/result",
-    },
-    {
-      name: "Contact Us",
-      link: "/contact",
-    },
-  ];
   return (
     <section className="relative flex flex-col text-white mt-2 md:mt-4">
       <div className="bg-[#050930] px-4 sm:px-12 lg:px-24 xl:px-32">

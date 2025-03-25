@@ -43,7 +43,7 @@ export const blogApi = createApi({
         method: "GET",
       }),
     }),
-    getBlogsById: builder.query<BlogNew, Number>({
+    getBlogsById: builder.query<BlogNew, number>({
       query: (id) => ({
         url: `blogcontent/${id}/`,
         method: "GET",

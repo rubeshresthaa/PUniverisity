@@ -25,10 +25,7 @@ const ContactUs = () => {
       .string()
       .min(3, "First name must be at least 3 characters")
       .max(50),
-    lastName: z
-      .string()
-      .min(1, "Last name is required")
-      .max(50),
+    lastName: z.string().min(1, "Last name is required").max(50),
     contact_number: z
       .string()
       .length(10, "Contact must be exactly 10 digits")
@@ -38,12 +35,9 @@ const ContactUs = () => {
       .min(2, { message: "Email is required" })
       .email({ message: "Invalid email address" })
       .trim(),
-    message: z
-      .string()
-      .min(1, { message: "Message is required" })
-      .max(500, {
-        message: "Message should not exceed 500 characters.",
-      }),
+    message: z.string().min(1, { message: "Message is required" }).max(500, {
+      message: "Message should not exceed 500 characters.",
+    }),
   });
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -63,7 +57,7 @@ const ContactUs = () => {
 
     try {
       // Call the postContact API
-      const response = await postContact({
+      await postContact({
         name,
         email: values.email,
         message: values.message,
@@ -71,7 +65,7 @@ const ContactUs = () => {
       }).unwrap(); // Use unwrap to catch the response or error
 
       // Check if the response was successful
-      toast.success("Thank You For Your Response.")
+      toast.success("Thank You For Your Response.");
 
       // Reset the form after submission
       form.reset();
@@ -107,24 +101,53 @@ const ContactUs = () => {
               onSubmit={form.handleSubmit(onSubmit)}
               className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 space-y-4 sm:space-y-8 text-gray-900"
             >
-              <FormInputDemo name="firstName" control={form.control} label="First Name" placeholder="First name" />
-              <FormInputDemo name="lastName" control={form.control} label="Last Name" placeholder="Last name" />
-              <FormInputDemo name="contact_number" control={form.control} label="Contact Number" placeholder="Contact" />
-              <FormInputDemo name="email" control={form.control} label="Email" placeholder="Email" />
+              <FormInputDemo
+                name="firstName"
+                control={form.control}
+                label="First Name"
+                placeholder="First name"
+              />
+              <FormInputDemo
+                name="lastName"
+                control={form.control}
+                label="Last Name"
+                placeholder="Last name"
+              />
+              <FormInputDemo
+                name="contact_number"
+                control={form.control}
+                label="Contact Number"
+                placeholder="Contact"
+              />
+              <FormInputDemo
+                name="email"
+                control={form.control}
+                label="Email"
+                placeholder="Email"
+              />
               <FormField
                 control={form.control}
                 name="message"
                 render={({ field }) => (
                   <FormItem className="sm:col-span-2 space-y-2">
-                    <FormLabel className="sm:text-lg">Message or Enquiry</FormLabel>
+                    <FormLabel className="sm:text-lg">
+                      Message or Enquiry
+                    </FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Type your message here." {...field} className="w-full min-h-[200px]" />
+                      <Textarea
+                        placeholder="Type your message here."
+                        {...field}
+                        className="w-full min-h-[200px]"
+                      />
                     </FormControl>
                     <FormMessage className="text-red-500" />
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="bg-blue-800 hover:bg-blue-700 font-bold cursor-pointer">
+              <Button
+                type="submit"
+                className="bg-blue-800 hover:bg-blue-700 font-bold cursor-pointer"
+              >
                 Submit
               </Button>
             </form>

@@ -86,7 +86,7 @@ const AddNewPost = () => {
             <FormField
               control={form.control}
               name="image"
-              render={({ field }) => (
+              render={() => (
                 <FormItem>
                   <FormLabel className="text-base">Image</FormLabel>
                   <FormControl>
@@ -99,7 +99,7 @@ const AddNewPost = () => {
             <FormField
               control={form.control}
               name="tag"
-              render={({ field }) => (
+              render={() => (
                 <FormItem>
                   <FormLabel className="text-base">Tag</FormLabel>
                   <FormControl>

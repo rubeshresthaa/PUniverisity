@@ -40,7 +40,7 @@ const signupFormSchema = z
   });
 
 const Signup1 = () => {
-  const [register, { isLoading, isSuccess }] = useRegisterMutation();
+  const [register, { isLoading }] = useRegisterMutation();
   const [showPassword, setShowPassword] = useState(false);
 
   //define form
@@ -66,11 +66,12 @@ const Signup1 = () => {
       password: values.password,
     });
 
-    response && response.data
-      ? toast.success("Registrtion successfull")
-      : response.error
-      ? toast.error("Failed to regiter")
-      : "";
+    if (response && response.data) {
+      toast.success("Successfully Register user");
+    }
+    if (response && response.error) {
+      toast.error("Failed to register, please try again");
+    }
     if (response.data) {
       form.reset();
     }
@@ -200,10 +201,11 @@ const Signup1 = () => {
             />
           </div>
           <button
+            disabled={isLoading}
             type="submit"
             className="rounded-full px-2 sm:px-4 py-1 w-24 sm:min-w-32 bg-black text-white cursor-pointer"
           >
-            Signup
+            {isLoading ? "Signing in.." : "Sign Up"}
           </button>
         </form>
       </Form>

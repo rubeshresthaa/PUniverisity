@@ -10,7 +10,9 @@ import Main from "../auth/Main";
 
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const access = localStorage.getItem("access");
+  const access = localStorage.getItem("access")
+    ? localStorage.getItem("access")
+    : null;
   return (
     <div className="flex justify-between items-center px-2 sm:px-12 lg:px-20  py-1 lg:py-3 sticky top-0 z-50 bg-white">
       <Link href="/" className="flex items-center gap-1 sm:gap-2">
@@ -87,29 +89,26 @@ const NavBar = () => {
               </h1>
             </div>
 
-            <Link href="#home" onClick={() => setOpenMenu(false)}>
+            <Link href="/#home" onClick={() => setOpenMenu(false)}>
               Home
             </Link>
-            <Link href="#blog" onClick={() => setOpenMenu(false)}>
+            <Link href="/blog" onClick={() => setOpenMenu(false)}>
               Blog
             </Link>
-            <Link href="#contact" onClick={() => setOpenMenu(false)}>
+            <Link href="/#program" onClick={() => setOpenMenu(false)}>
               Programs
             </Link>
-            <Link href="#contact" onClick={() => setOpenMenu(false)}>
+            <Link href="/#news" onClick={() => setOpenMenu(false)}>
               News
             </Link>
-            <Link href="#contact" onClick={() => setOpenMenu(false)}>
+            <Link href="/#college" onClick={() => setOpenMenu(false)}>
               Affiliated College
             </Link>
-            <Link href="#contact" onClick={() => setOpenMenu(false)}>
+            <Link href="/result" onClick={() => setOpenMenu(false)}>
               Results
             </Link>
-            <Link href="#contact" onClick={() => setOpenMenu(false)}>
+            <Link href="/#contact" onClick={() => setOpenMenu(false)}>
               Contact Us
-            </Link>
-            <Link href="#contact" onClick={() => setOpenMenu(false)}>
-              Login
             </Link>
           </div>
         </div>

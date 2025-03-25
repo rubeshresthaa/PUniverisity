@@ -9,7 +9,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { LucideBaby } from "lucide-react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 export function SelectComp({
