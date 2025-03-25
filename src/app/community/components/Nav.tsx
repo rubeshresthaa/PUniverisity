@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Dialog,
@@ -23,7 +24,13 @@ import Link from "next/link";
 import { LogOut } from "lucide-react";
 import { IoNotificationsCircleOutline } from "react-icons/io5";
 import AddNewPost from "./AddNewPost";
+import { useRouter } from "next/navigation";
 const Nav = () => {
+  const router = useRouter();
+  const handleLogout = () => {
+    localStorage.clear();
+    router.push("/");
+  };
   return (
     <div className="flex justify-between items-center py-2 px-4 sm:px-8 md:px-12 lg:px-32 sticky top-0 bg-white">
       <div className="flex items-center gap-1">
@@ -74,7 +81,9 @@ const Nav = () => {
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction>Logout</AlertDialogAction>
+              <AlertDialogAction onClick={handleLogout}>
+                Logout
+              </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>

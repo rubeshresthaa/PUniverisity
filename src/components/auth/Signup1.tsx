@@ -15,6 +15,8 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { passwordSchema } from "@/lib/utils";
+import { useRegisterMutation } from "@/store/apiSlice";
+import toast from "react-hot-toast";
 
 const signupFormSchema = z
   .object({
@@ -38,6 +40,7 @@ const signupFormSchema = z
   });
 
 const Signup1 = () => {
+  const [register, { isLoading, isSuccess }] = useRegisterMutation();
   const [showPassword, setShowPassword] = useState(false);
 
   //define form
@@ -54,10 +57,23 @@ const Signup1 = () => {
   });
 
   //submit handler
-  const onSubmit = (values: z.infer<typeof signupFormSchema>) => {
-    console.log("triggered");
-    console.log("values", values);
-    form.reset();
+  const onSubmit = async (values: z.infer<typeof signupFormSchema>) => {
+    const response = await register({
+      email: values.email,
+      first_name: values.first_name,
+      last_name: values.last_name,
+      phone: values.phone,
+      password: values.password,
+    });
+
+    response && response.data
+      ? toast.success("Registrtion successfull")
+      : response.error
+      ? toast.error("Failed to regiter")
+      : "";
+    if (response.data) {
+      form.reset();
+    }
   };
   return (
     <div className="flex flex-col gap-6">
