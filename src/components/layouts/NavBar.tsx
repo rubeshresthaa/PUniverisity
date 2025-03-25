@@ -10,10 +10,7 @@ import { RiMenuFill } from "react-icons/ri";
 const NavBar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
-    <div
-  
-      className="flex justify-between items-center px-2 sm:px-12 lg:px-20  py-1 lg:py-3 sticky top-0 z-50 bg-white"
-    >
+    <div className="flex justify-between items-center px-2 sm:px-12 lg:px-20  py-1 lg:py-3 sticky top-0 z-50 bg-white">
       {/* Logo section */}
       <Link href="#home" className="flex items-center gap-1 sm:gap-2">
         <Image
@@ -44,7 +41,7 @@ const NavBar = () => {
           <Link href={"#college"}>College</Link>
         </div>
         <div className="hover:scale-110 transition-transform duration-300 ease-in">
-          <Link href={"#"}>Result</Link>
+          <Link href={"/result"}>Result</Link>
         </div>
         <div className="hover:scale-110 transition-transform duration-300 ease-in">
           <Link href={"#"}>Form</Link>
