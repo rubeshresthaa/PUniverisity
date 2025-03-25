@@ -15,8 +15,13 @@ import { z } from "zod";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "../ui/button";
 import FormInputDemo from "../shared/FormInput";
+import { usePostContactMutation } from "@/store/apiSlice";
+import toast from "react-hot-toast";
 
 const ContactUs = () => {
+  const [postContact]=usePostContactMutation();
+  console.log("contact",postContact);
+
   const contactFormSchema = z.object({
     firstName: z
       .string()
@@ -32,7 +37,7 @@ const ContactUs = () => {
       .min(2, { message: "Email is required" })
       .email({ message: "Invalid email address" })
       .trim(),
-    contents: z
+    message: z
       .string()
       .min(1, { message: "Message is required" })
       .max(500, { message: "Message should not exceed 500 characters." }),
@@ -44,15 +49,27 @@ const ContactUs = () => {
       lastName: "",
       contact: "",
       email: "",
-      contents: "",
+      message: "",
     },
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof contactFormSchema>) {
+    const name=values.firstName + values.lastName;
+      const response = await postContact({
+      name,
+      email: values.email,
+      message: values.message,
+      phone: values.contact,
+    });
+    if (response?.data) {
+      toast.success("Your message sent successfully, Thank you");
+    } else {
+      toast.error(
+        "Failed to send your message, please try again later. Thank you"
+      );
+    }
+    form.reset();
   }
   return (
     <div id="contact" className="py-5 w-full px-4 lg:px-20">
@@ -105,7 +122,7 @@ const ContactUs = () => {
               />
               <FormField
                 control={form.control}
-                name="contents"
+                name="message"
                 render={({ field }) => (
                   <FormItem className="sm:col-span-2 space-y-2">
                     <FormLabel className="sm:text-lg">
